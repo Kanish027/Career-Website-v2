@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+
+* {
+  font-family: "Parkinsans", sans-serif;
+}
+
+/* Styles for footer links on hover */
+.footer-link:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.banner {
+  width: 100% !important;
+  height: 200px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5Cent - About</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    {% include "Navbar.html" %}
+    <div class="py-4">
+      <h1 class="text-center fw-semibold py-2">About 5Cent</h1>
+      <hr />
+    </div>
+
+    <div class="container pb-5 mb-3">
+      <div class="row d-flex justify-content-center align-items-center gx-5">
+        <div class="col-lg-6">
+          <img
+            src="https://www.apple.com/v/apple-events/home/aa/images/meta/overview__bcphzsdb4fpu_og.png?202308230108"
+            class="w-100 rounded"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-6">
+          <h4 class="text-center">Our Story</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            minima sed omnis veniam a odio? Soluta minus quis officia beatae
+            consectetur debitis aperiam, autem voluptatum dicta explicabo
+            quaerat rem amet.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            minima sed omnis veniam a odio? Soluta minus quis officia beatae
+            consectetur debitis aperiam, autem voluptatum dicta explicabo
+            quaerat rem amet.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            minima sed omnis veniam a odio? Soluta minus quis officia beatae
+            consectetur debitis aperiam, autem voluptatum dicta explicabo
+            quaerat rem amet.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% include "Footer.html" %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
