@@ -1,37 +1,7 @@
 from flask import Flask, render_template
+from database import load_jobs_from_db
 
 app = Flask(__name__)
-
-JOBS = [
-    {
-        'id': 1,
-        'title': 'Data Analyst',
-        'location': 'Bengluru, India',
-        'salary': '10,00,000',
-        'currency': '₹'
-    },
-    {
-        'id': 2,
-        'title': 'Data Scientist',
-        'location': 'Hyderabad, India',
-        'salary': '12,00,000',
-        'currency': '₹'
-    },
-    {
-        'id': 3,
-        'title': 'Frontend Engineer',
-        'location': 'San Franscisco, USA',
-        'salary': '120,000',
-        'currency': '$'
-    },
-    {
-        'id': 4,
-        'title': 'AI Engineer',
-        'location': 'Pune, India',
-        'salary': '8,00,000',
-        'currency': '₹'
-    },
-]
 
 @app.route('/')
 def home():
@@ -39,7 +9,8 @@ def home():
 
 @app.route('/careers')
 def careers():
-    return render_template('Careers.html', jobs=JOBS)
+    job_list = load_jobs_from_db()
+    return render_template('Careers.html', jobs=job_list)
 
 @app.route('/contact')
 def contact():
