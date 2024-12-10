@@ -44,8 +44,10 @@
             <span class="fw-semibold pe-2">Location:</span>{{ job.location }}
           </h6>
           <h6>
-            <span class="fw-semibold pe-2">Salary:</span>{{ job.currency }}. {{
-            job.salary }}
+            <span class="fw-semibold pe-2">Salary:</span>{% if job.currency ==
+            None %} Rs {% else %} {{ job.currency }} {% endif %} . {% if
+            job.salary == None %} Not Mentioned {% else %} {{ job.salary }} {%
+            endif %}
           </h6>
         </div>
         <div class="col-lg-4 d-flex justify-content-center align-items-center">

@@ -1,7 +1,12 @@
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
 
-engine = create_engine("mysql+pymysql://admin:KanishMohariya27$@database-1.c3q48e8q683x.ap-south-1.rds.amazonaws.com/5_cent_career?charset=utf8mb4",                 
-)
+load_dotenv()
+
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+engine = create_engine(DATABASE_URL)
 
 def load_jobs_from_db():
     with engine.connect() as conn:
